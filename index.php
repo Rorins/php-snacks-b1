@@ -48,11 +48,14 @@ for ($i=0; $i<$arrayLength; $i++){
 // che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero.
 // Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato"
 
-$name = GET_['name'];
-$mail = GET_['mail'];
-$age = GET_['age'];
+$name = $_GET['name'];
+$mail = $_GET['mail'];
+$age = $_GET['age'];
 
-if (strlen($name) > 3&& str_contains($mail, '.')&& str_contains($mail, '@')&& is_numeric($age)){
+if (strlen($name) > 3
+&& strpos($mail, '.') !== false
+&& strpos($mail, '@') !== false
+&& is_numeric($age)){
     echo "accesso eseguito";
 } else {
     echo "accesso negato";
