@@ -36,4 +36,21 @@
 
 ?>
 
-<?php echo $matches[0][team1]." - ".$matches[0][team2]." | ".$matches[0][point_team_1]." - ".$matches[0][point_team_2]?> 
+<?php
+$arrayLength = count($matches);
+for ($i=0; $i<$arrayLength; $i++)
+{echo $matches[$i][team1]." - ".$matches[$i][team2]." | ".$matches[$i][point_team_1]." - ".$matches[$i][point_team_2]."</br>";};
+?> 
+
+
+<!-- // Snack 2
+// Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione)
+// che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero.
+// Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato"
+
+// $name = GET_['name']
+// $mail = GET_['mail']
+// $age = GET_['age']
+
+// if strln($name) > 3 &&
+//  -->
