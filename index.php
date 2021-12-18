@@ -53,11 +53,78 @@ $mail = $_GET['mail'];
 $age = $_GET['age'];
 
 if (strlen($name) > 3
-&& strpos($mail, '.') !== false
-&& strpos($mail, '@') !== false
+&& strpos($mail, '.')
+&& strpos($mail, '@')
 && is_numeric($age)){
     echo "accesso eseguito";
 } else {
     echo "accesso negato";
 };
 ?>
+
+</br>
+
+<!-- Snack 3
+Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
+Qui l'array di esempio: https://www.codepile.net/pile/R2K5d68z -->
+
+<?php
+
+$posts = [
+
+    '10/01/2019' => [
+        [
+            'title' => 'Post 1',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 1'
+        ],
+        [
+            'title' => 'Post 2',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 2'
+        ],
+    ],
+    '10/02/2019' => [
+        [
+            'title' => 'Post 3',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 3'
+        ]
+    ],
+    '15/05/2019' => [
+        [
+            'title' => 'Post 4',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 4'
+        ],
+        [
+            'title' => 'Post 5',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 5'
+        ],
+        [
+            'title' => 'Post 6',
+            'author' => 'Michele Papagni',
+            'text' => 'Testo post 6'
+        ]
+    ],
+];
+
+//ARRAY KEYS RETURNS AN ARRAY OF KEYS OF ARRAY POSTS (IN THIS CASE THE KEYS ARE DATE)
+//[FIRST DATE, SECOND DATE....]
+$date = array_keys($posts);
+
+//ENTERING ARRAY OF DATES IN FIRST LOOP TO PRINT THE DATES POSITION, (IT WILL LOOP FOR ELEMENTS INSIDE POSTS LENGTH)
+for($i=0; $i < count($posts);$i++){
+    echo $date[$i].'</br>';
+
+//AFTER I ENTERED THE DATE POSITION I ENTER POSTS, DATE POSITION AND
+// THE POSITION OF ELEMENTS INSIDE DATE POSITION (IT WILL LOOP FOR ELEMENTS INSIDE $DATE,INSIDE POSTS)
+for($j=0; $j < count($posts[$date[$i]]); $j++){
+   echo $posts[$date[$i]][$j]['title'].'</br>';
+   echo $posts[$date[$i]][$j]['author'].'</br>';
+   echo $posts[$date[$i]][$j]['text'].'</br>';
+};
+};
+?>
+
