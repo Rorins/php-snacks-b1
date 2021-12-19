@@ -144,3 +144,18 @@ Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà cont
     print_r($casualArray);
 ?>
 
+</br>
+<!-- Snack 5
+Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+
+<?php
+$paragraph = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis turpis vitae sapien dapibus, vel mollis lorem blandit. Nam sit amet imperdiet libero. Curabitur viverra vulputate est sed maximus. Aenean metus diam, bibendum sed feugiat vehicula, pharetra et dolor. Sed dapibus ex nec aliquet ullamcorper. Nam mattis fermentum fermentum. Suspendisse rhoncus nec elit a posuere. Integer dui metus, iaculis vel laoreet ut, congue ut tortor. Praesent vel sagittis quam. Donec non porta eros, sed cursus nisi. Duis et nunc nibh. Phasellus id arcu commodo, tristique mauris sed, dictum mi. Vivamus nec eleifend nunc, in scelerisque turpis. Vestibulum porta lorem in enim commodo ultricies.
+
+Suspendisse ac commodo ligula. Donec sodales nisi a tortor dignissim, at hendrerit arcu tincidunt. Morbi posuere ex est, et vestibulum arcu molestie vel. Quisque mollis lorem quis condimentum pretium. Sed sed fringilla dui. Nam ac dignissim magna. Proin ultricies purus eget magna iaculis semper. Duis tempor feugiat malesuada. Mauris sed lobortis enim. Aenean dictum justo ut molestie iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam at lacus ut nibh porttitor pharetra at a risus. Donec eu posuere diam. Nullam sollicitudin felis augue, non venenatis turpis aliquam nec. Nunc lectus sapien, scelerisque vitae nulla ut, tempus pretium risus. ";
+
+//EXPLODE RETURNS AN ARRAY OF STRINGS, WE CANT PRINT THE POSITION OUT
+$splitParagraph = explode(".", $paragraph);
+echo $splitParagraph[0]."</br>";
+echo $splitParagraph[1]."</br>";
+echo $splitParagraph[2]."</br>";
+?>
