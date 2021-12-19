@@ -159,3 +159,55 @@ echo $splitParagraph[0]."</br>";
 echo $splitParagraph[1]."</br>";
 echo $splitParagraph[2]."</br>";
 ?>
+
+<!-- Snack 6
+Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
+<?php
+ 
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ];
+
+    ?>
+
+<!--LOOP ON ELEMENTS INSIDE TEACHERS INSIDE DB-->
+<div style="background: gray;width: 200px">
+<?php
+for($i=0; $i< count($db['teachers']); $i++){
+echo $db['teachers'][$i]['name'];
+echo $db['teachers'][$i]['lastname']."</br>";
+}
+?>
+</div>
+
+<!--LOOP ON ELEMENTS INSIDE PM INSIDE DB-->
+<div style="background: green; width:200px">
+<?php
+for($i=0; $i< count($db['pm']); $i++){
+echo $db['pm'][$i]['name'];
+echo $db['pm'][$i]['lastname']."</br>";
+}
+?>
+</div>
+
+
+
